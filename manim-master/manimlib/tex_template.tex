@@ -1,0 +1,34 @@
+\documentclass[preview]{standalone}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{setspace}
+\usepackage{tipa}
+\usepackage{relsize}
+\usepackage{textcomp}
+\usepackage{mathrsfs}
+\usepackage{calligra}
+\usepackage{wasysym}
+\usepackage{ragged2e}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\DisableLigatures{encoding = *, family = * }
+%\usepackage[UTF8]{ctex}
+\linespread{1}
+
+\begin{document}
+\begin{circuitikz}[american]
+                  \draw[ultra thin](-2,-2) to [vsourcesin,invert,f<,o-,l=$V$] (-2,2);
+                   \draw[ultra thin](-2,2) to [R,v^=$ $,l_,o-*] (0,2) to [cute inductor,v_=$ $,l^,*-*] (2,2);
+                   \draw[ultra thin](2,2) to [C,l^] (2,-2) to[lamp,*-] (-2,-2);
+                   \draw[-stealth] ([shift=(20:1cm)]0,0) arc (20:300:1cm) node [above] {$i$};
+      \end{circuitikz}
+
+\end{document}
